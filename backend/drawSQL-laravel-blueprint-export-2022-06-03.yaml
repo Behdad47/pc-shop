@@ -1,0 +1,65 @@
+models:
+    ShippingAddress:
+        id: false
+        _id: integer primary
+        order: integer
+        address: char
+        city: char
+        postalCode: char
+        country: char
+        shippingPrice: decimal
+    Order:
+        id: false
+        _id: integer primary
+        user: integer
+        paymentMethod: char
+        taxPrice: decimal
+        shippingPrice: decimal
+        totalPrice: decimal
+        isPaid: boolean
+        paidAt: date
+        isDelivered: boolean
+        deliveredAt: date
+        createdAt: date
+    OrderItem:
+        id: false
+        _id: integer primary
+        order: integer
+        product: integer
+        name: char
+        qty: integer
+        price: decimal
+        image: char
+    User:
+        id: integer primary
+        username: char
+        first_name: bigInteger
+        last_name: char
+        email: char
+        password: char
+        is_staff: boolean
+        is_active: boolean
+        is_superuser: boolean
+    Product:
+        id: false
+        _id: integer primary
+        user: integer
+        name: char
+        image: char
+        brand: char
+        category: char
+        description: char
+        rating: integer
+        numReviews: integer
+        price: decimal
+        countInStock: integer
+        createdAt: date
+    Review:
+        id: false
+        _id: integer primary
+        user: integer
+        product: integer
+        name: char
+        rating: integer
+        comment: text
+        createdAt: date
