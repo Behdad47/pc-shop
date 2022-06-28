@@ -35,6 +35,7 @@ function LoginScreen({ location, history }) {
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
+
                 <Form.Group controlId='email'>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
@@ -43,7 +44,6 @@ function LoginScreen({ location, history }) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
-
                     </Form.Control>
                 </Form.Group>
 
@@ -55,13 +55,13 @@ function LoginScreen({ location, history }) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
-
                     </Form.Control>
                 </Form.Group>
 
                 <Button type='submit' variant='primary'>
                     Sign In
                 </Button>
+                
             </Form>
 
             <Row className='py-3'>
