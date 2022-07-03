@@ -9,6 +9,7 @@ from base.serializers import ProductSerializer
 
 from rest_framework import status
 
+
 @api_view(['GET'])
 def getProducts(request):
     # needs to be serialized and returned as json since django rest framework needs it
